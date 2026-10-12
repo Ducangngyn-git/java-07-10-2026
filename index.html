@@ -1,119 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dự án Cuối kỳ - Bộ sưu tập Nhiếp ảnh Thiên nhiên</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body>
-    <header>
-      <h1 id="top">Bộ sưu tập Nhiếp ảnh Thiên nhiên</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo cáo Bài tập: Phác thảo Wireframe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Báo cáo Bài tập: Phác thảo Wireframe Website</h1>
+        <p>Sinh viên: [Tên của bạn] | Môn học: Thiết kế Giao diện người dùng</p>
     </header>
 
-    <main>
-      <p>
-        Chào mừng bạn đến với trang web triển lãm nhiếp ảnh thiên nhiên. Trang
-        web này giới thiệu những khoảnh khắc tuyệt đẹp về cảnh quan thiên nhiên,
-        thực vật và động vật hoang dã từ nhiều nơi trên thế giới.
-      </p>
+    <main class="container">
+        <!-- Bài viết mô tả ngắn gọn -->
+        <article class="description-article">
+            <h2>Mô tả dự án</h2>
+            <p>Dưới đây là các bản phác thảo (wireframes) cho dự án thiết kế trang web cá nhân/portfolio của tôi. Mục tiêu là tạo ra một cấu trúc rõ ràng, dễ điều hướng và tập trung vào nội dung mà không bị phân tâm bởi màu sắc hay kiểu chữ.</p>
+            <p>Tôi đã thiết kế hai chế độ xem chính: <strong>Chế độ màn hình lớn (Desktop)</strong> cho trang đích (Landing Page) và <strong>Chế độ di động (Mobile)</strong>. Giao diện Desktop chia thành nhiều cột để tận dụng không gian rộng, trong khi giao diện Mobile sử dụng cấu trúc xếp chồng dọc (single-column) giúp người dùng dễ dàng cuộn và đọc trên màn hình nhỏ.</p>
+        </article>
 
-      <p>
-        Giao diện trang web được thiết kế theo phương pháp đáp ứng (Responsive
-        Web Design), có khả năng tự động điều chỉnh hiển thị tối ưu trên thiết
-        bị di động, máy tính bảng và màn hình máy tính lớn, đồng thời hỗ trợ tùy
-        chọn giảm chuyển động và chế độ nền tối (Dark Mode).
-      </p>
+        <!-- Khu vực hiển thị Wireframe -->
+        <section class="wireframes-section">
+            <h2>Các bản phác thảo thiết kế</h2>
 
-      <div class="grid">
-        <figure>
-          <img
-            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500"
-            alt="Cảnh bình minh rực rỡ trên dãy núi hùng vĩ"
-            width="200"
-            height="200"
-          />
-          <figcaption>Bình minh trên núi</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="images.jpg"
-            alt="Khu rừng xanh mướt chìm trong sương mù mờ ảo"
-            width="200"
-            height="200"
-          />
-          <figcaption>Rừng sương mù</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500"
-            alt="Cánh đồng hoa dại rực rỡ dưới ánh nắng chiều"
-            width="200"
-            height="200"
-          />
-          <figcaption>Cánh đồng hoa</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500"
-            alt="Thung lũng xanh tươi kề bên hồ nước trong xanh"
-            width="200"
-            height="200"
-          />
-          <figcaption>Thung lũng xanh</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=500"
-            alt="Hoàng hôn thơ mộng bao phủ dòng sông êm đềm"
-            width="200"
-            height="200"
-          />
-          <figcaption>Hoàng hôn bên sông</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500"
-            alt="Tia nắng mặt trời xuyên qua tán cây rừng rậm"
-            width="200"
-            height="200"
-          />
-          <figcaption>Nắng xuyên qua rừng</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500"
-            alt="Bãi biển cát trắng miệt mài cùng sóng biển xanh"
-            width="200"
-            height="200"
-          />
-          <figcaption>Bãi biển nhiệt đới</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=500"
-            alt="Đỉnh núi phủ đầy tuyết trắng ngần dưới bầu trời thu"
-            width="200"
-            height="200"
-          />
-          <figcaption>Đỉnh núi tuyết</figcaption>
-        </figure>
-        <figure>
-          <img
-            src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=500"
-            alt="Thác nước tung bọt trắng xóa giữa thiên nhiên hùng vĩ"
-            width="200"
-            height="200"
-          />
-          <figcaption>Thác nước hùng vĩ</figcaption>
-        </figure>
-      </div>
+            <div class="wireframes-grid">
+                <!-- Chế độ xem Desktop -->
+                <figure class="wireframe-container">
+                    <figcaption>1. Trang đích (Landing Page) - Chế độ màn hình Desktop</figcaption>
+                    <div class="wireframe desktop-view">
+                        <div class="wf-header">
+                            <div class="wf-logo">Logo</div>
+                            <div class="wf-nav">Menu Item | Menu Item | Menu Item</div>
+                        </div>
+                        <div class="wf-hero">
+                            <div class="wf-hero-text">
+                                <div class="wf-line title"></div>
+                                <div class="wf-line"></div>
+                                <div class="wf-line"></div>
+                                <div class="wf-button">Call to Action</div>
+                            </div>
+                            <div class="wf-hero-img">Image Placeholder</div>
+                        </div>
+                        <div class="wf-features">
+                            <div class="wf-box">Feature 1</div>
+                            <div class="wf-box">Feature 2</div>
+                            <div class="wf-box">Feature 3</div>
+                        </div>
+                        <div class="wf-footer">Footer Content</div>
+                    </div>
+                </figure>
+
+                <!-- Chế độ xem Mobile -->
+                <figure class="wireframe-container">
+                    <figcaption>2. Trang đích - Chế độ màn hình Mobile</figcaption>
+                    <div class="wireframe mobile-view">
+                        <div class="wf-header">
+                            <div class="wf-logo">Logo</div>
+                            <div class="wf-menu-icon">≡</div>
+                        </div>
+                        <div class="wf-hero">
+                            <div class="wf-hero-img">Image</div>
+                            <div class="wf-hero-text">
+                                <div class="wf-line title"></div>
+                                <div class="wf-line"></div>
+                                <div class="wf-button">Action</div>
+                            </div>
+                        </div>
+                        <div class="wf-features">
+                            <div class="wf-box">Feature 1</div>
+                            <div class="wf-box">Feature 2</div>
+                            <div class="wf-box">Feature 3</div>
+                        </div>
+                        <div class="wf-footer">Footer</div>
+                    </div>
+                </figure>
+            </div>
+        </section>
     </main>
-
-    <footer>
-      <a href="#top">Jump to the Top</a>
-    </footer>
-  </body>
+</body>
 </html>

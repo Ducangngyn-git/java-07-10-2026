@@ -1,168 +1,221 @@
-/* ==========================================================================
-   1. CHẾ ĐỘ XEM DI ĐỘNG (MOBILE VIEW - MOBILE FIRST)
-   Không sử dụng truy vấn phương tiện (Media Query) ở phần này
-   ========================================================================== */
-
-/* Hành vi cuộn mượt mặc định khi bấm 'Jump to the Top' */
-html {
-  scroll-behavior: smooth;
+/* Thiết lập cơ bản */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  background-color: #dedede;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 15px;
-  color: #333333;
+    font-family: Arial, sans-serif; /* Phông chữ cơ bản theo yêu cầu wireframe */
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
 }
 
-h1 {
-  text-align: center;
-  font-family: Arial, sans-serif;
-  font-size: 32px;
-  margin-top: 20px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-a {
-  color: #000000;
-  text-decoration: underline;
-  font-family: Arial, sans-serif;
+/* Phần Header của báo cáo */
+.page-header {
+    background-color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 30px;
 }
 
-a:hover, 
-a:focus {
-  text-decoration: none;
+.page-header h1 {
+    margin-bottom: 10px;
+    color: #000;
 }
 
-p {
-  font-size: 18px;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  line-height: 1.6;
-  margin-bottom: 20px;
+.page-header p {
+    color: #666;
 }
 
-/* Lưới CSS 1 cột cho di động với khoảng cách 10px giữa các hàng và cột */
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
+/* Bài viết mô tả */
+.description-article {
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 40px;
 }
 
-/* Kiểu dáng cho thẻ figure và hình ảnh */
-figure {
-  margin: 0;
-  padding: 10px;
-  background-color: #ffffff;
-  border: 2px solid #cccccc;
-  text-align: center;
-  box-sizing: border-box;
+.description-article h2 {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
 }
 
-figure img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto 10px auto;
+.description-article p {
+    margin-bottom: 15px;
+    text-align: justify;
 }
 
-figcaption {
-  font-size: 16px;
-  font-weight: bold;
+/* Khu vực hiển thị Wireframe */
+.wireframes-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-footer {
-  text-align: center;
-  margin-top: 30px;
-  padding: 15px;
+.wireframes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-
-/* ==========================================================================
-   2. TRUY VẤN PHƯƠNG TIỆN 1: MÁY TÍNH BẢNG (TABLET VIEW - 772PX)
-   ========================================================================== */
-@media screen and (min-width: 772px) {
-  /* Chuyển sang lưới 2 cột */
-  .grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  /* Đặt bán kính đường viền để tạo hình tròn cho các hình */
-  figure {
-    border-radius: 50%;
-    overflow: hidden;
-  }
-
-  figure img {
-    border-radius: 50%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-  }
-
-  /* Đặt thẻ figure cuối cùng chiếm cả hai cột */
-  figure:last-child {
-    grid-column: 1 / -1;
-  }
+.wireframe-container {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-
-/* ==========================================================================
-   3. TRUY VẤN PHƯƠNG TIỆN 2: MÀN HÌNH LỚN (LARGE SCREEN VIEW - 992PX)
-   Chỉ sử dụng min-width, KHÔNG sử dụng max-width
-   ========================================================================== */
-@media screen and (min-width: 992px) {
-  /* Đặt mỗi thẻ figure thứ ba (3, 6, 9,...) chiếm cả hai cột */
-  figure:nth-child(3n) {
-    grid-column: span 2;
-  }
-
-  /* Xóa bán kính đường viền khỏi tất cả các hình */
-  figure,
-  figure img {
-    border-radius: 0;
-  }
+.wireframe-container figcaption {
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.1em;
 }
 
-
-/* ==========================================================================
-   4. TRUY VẤN PHƯƠNG TIỆN 3: GIẢM CHUYỂN ĐỘNG (PREFERS-REDUCED-MOTION)
-   ========================================================================== */
-@media (prefers-reduced-motion: reduce) {
-  /* Tắt hành vi cuộn mượt */
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
-  }
+/* Các thành phần cấu trúc của Wireframe (Mô phỏng bản vẽ) */
+.wireframe {
+    border: 2px solid #333;
+    background-color: #fff;
+    margin: 0 auto;
+    color: #666;
+    font-size: 0.9em;
 }
 
+.desktop-view {
+    width: 600px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+}
 
-/* ==========================================================================
-   5. TRUY VẤN PHƯƠNG TIỆN 4: BẢNG MÀU TỐI (PREFERS-COLOR-SCHEME: DARK)
-   ========================================================================== */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #121212;
-    color: #f0f0f0;
-  }
+.mobile-view {
+    width: 300px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+}
 
-  a {
-    color: #ffd700;
-  }
+/* Định dạng các khối bên trong Wireframe (Chỉ dùng xám/trắng/đen) */
+.wf-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 2px solid #333;
+    background-color: #f0f0f0;
+}
 
-  /* 
-     - Màu nền của figure: màu tối (#222222)
-     - Màu phông chữ của figure: màu vàng (#ffff00) giúp đạt tỉ lệ tương phản WAVE cao
-     - Màu đường viền: màu đen (#000000)
-  */
-  figure {
-    background-color: #222222;
-    color: #ffff00;
-    border-color: #000000;
-  }
+.wf-logo {
+    width: 80px;
+    height: 30px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #666;
+}
+
+.wf-menu-icon {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.wf-hero {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    border-bottom: 2px solid #333;
+    flex: 1;
+}
+
+.desktop-view .wf-hero {
+    flex-direction: row;
+    align-items: center;
+}
+
+.mobile-view .wf-hero {
+    flex-direction: column;
+}
+
+.wf-hero-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.wf-line {
+    height: 12px;
+    background-color: #ddd;
+    width: 100%;
+}
+
+.wf-line.title {
+    height: 24px;
+    width: 70%;
+    background-color: #bbb;
+    margin-bottom: 10px;
+}
+
+.wf-button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #666;
+    color: #fff;
+    text-align: center;
+    width: 120px;
+}
+
+.wf-hero-img {
+    flex: 1;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #999;
+    min-height: 120px;
+}
+
+.wf-features {
+    display: flex;
+    padding: 20px;
+    gap: 15px;
+    border-bottom: 2px solid #333;
+}
+
+.desktop-view .wf-features {
+    flex-direction: row;
+}
+
+.mobile-view .wf-features {
+    flex-direction: column;
+}
+
+.wf-box {
+    flex: 1;
+    height: 80px;
+    background-color: #f5f5f5;
+    border: 1px solid #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wf-footer {
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
 }
